@@ -1,0 +1,182 @@
+/* Reset e básico */
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0; padding: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container {
+  background: rgba(255 255 255 / 0.15);
+  border-radius: 20px;
+  padding: 30px 40px;
+  width: 380px;
+  max-width: 90vw;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+
+/* Carta */
+#carta {
+  background: #fff0f5;
+  border-radius: 20px;
+  border: 3px solid #ff2e63;
+  padding: 60px 30px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 90px;
+  line-height: 1;
+  transition: all 0.5s ease;
+  color: #ff2e63;
+}
+#carta.open {
+  font-size: 20px;
+  padding: 20px 30px;
+  cursor: default;
+  border-color: #ff7eb3;
+}
+
+#texto-carta {
+  min-height: 60px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#abrir-btn {
+  margin-top: 20px;
+  background: #ff2e63;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#abrir-btn:hover {
+  background: #e02655;
+}
+
+/* Pergunta */
+#pergunta {
+  margin-top: 25px;
+  display: none;
+}
+#pergunta.show {
+  display: block;
+}
+.frase {
+  font-size: 24px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  text-shadow: 0 0 5px #ff2e63;
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+button#sim-btn, button#nao-btn {
+  background: #ff2e63;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 30px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background 0.3s ease;
+}
+button#sim-btn:hover {
+  background: #e02655;
+}
+button#nao-btn {
+  background: #b22222;
+}
+button#nao-btn:hover {
+  background: #7f1616;
+}
+
+/* Mensagem botão NÃO */
+#mensagem-nao {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  color: #ffe3e3;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  min-height: 24px;
+}
+#mensagem-nao.show {
+  opacity: 1;
+}
+
+/* Container emojis subindo */
+#emoji-container {
+  position: relative;
+  height: 280px;
+  margin-top: 20px;
+  overflow: visible;
+}
+.emoji {
+  position: absolute;
+  font-size: 28px;
+  user-select: none;
+  pointer-events: none;
+  animation-name: subir;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-280px) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* Coração gigante */
+#coracao-gigante {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 230px;
+  color: #ff2e63;
+  user-select: none;
+  transition: transform 1s ease;
+  pointer-events: none;
+  text-shadow: 0 0 30px #ff2e63;
+}
+#coracao-gigante.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Mensagem final */
+#mensagem-final {
+  margin-top: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 5px #ff2e63;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+#mensagem-final.show {
+  opacity: 1;
+}

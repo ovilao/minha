@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dia dos Namorados - Te Amo Meu Amor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container" role="main" aria-live="polite" aria-atomic="true">
+
+    <!-- Carta -->
+    <div id="carta" class="closed" tabindex="0" aria-label="Carta de dia dos namorados">
+      <div id="texto-carta">💌</div>
+      <button id="abrir-btn" aria-label="Abrir carta">Abrir Carta</button>
+    </div>
+
+    <!-- Pergunta com botões -->
+    <div id="pergunta" aria-live="polite" aria-atomic="true">
+      <p class="frase">Quer namorar comigo?</p>
+      <div class="botoes">
+        <button id="sim-btn" aria-label="Sim, quero namorar">Sim ❤️</button>
+        <button id="nao-btn" aria-label="Não quero namorar">Não 😢</button>
+      </div>
+    </div>
+
+    <!-- Mensagem ao clicar no Não -->
+    <div id="mensagem-nao" role="alert" aria-live="assertive"></div>
+
+    <!-- Container emojis subindo -->
+    <div id="emoji-container" aria-hidden="true"></div>
+
+    <!-- Coração gigante -->
+    <div id="coracao-gigante" aria-hidden="true">❤️</div>
+
+    <!-- Mensagem final -->
+    <div id="mensagem-final" aria-hidden="true">Eu te amo, meu amor!</div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
